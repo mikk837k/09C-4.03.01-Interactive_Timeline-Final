@@ -4,10 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed|Ubuntu+Mono"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="timeline.css" />
     <title>Document</title>
   </head>
   <body>
+    <div id="overlay"></div>
+    <div id="svg_timeAndDate"></div>
+    <div id="svg_folder"></div>
+    <div id="modal_placeholder">
+      <div id="modal_window">
+        <div class="movie_data">
+          <h1 data-field="title"></h1>
+          <p data-field="plot">Plot:</p>
+          <p data-field="year">Release:</p>
+          <p data-field="director">Director:</p>
+        </div>
+        <div class="image">
+          <img data-field="image" src="" alt="movie poster" />
+        </div>
+      </div>
+    </div>
+    <div id="svg_jarvis"></div>
     <div id="svg_timeline"></div>
+    <div id="svg_folder"></div>
+
+    <template id="movie_template">
+      <div class="movie_data">
+        <h1 data-field="title"></h1>
+        <p data-field="plot"></p>
+        <p data-field="year"></p>
+        <p data-field="director"></p>
+      </div>
+      <div class="image">
+        <img data-field="image" src="" alt="movie poster" />
+      </div>
+    </template>
     <script src="script.js"></script>
+    <script defer src="timelineAnimation.js"></script>
   </body>
 </html>

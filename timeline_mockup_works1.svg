@@ -57,9 +57,7 @@
 
       .cls-12 {
         font-size: 21px;
-        fill: #c2f4ff;
-        font-family: UbuntuMono-Bold, Ubuntu Mono;
-        font-weight: 700;
+        font-family: UbuntuMono-Regular, Ubuntu Mono;
       }
 
       .cls-13 {
@@ -74,9 +72,6 @@
   <title>timeline_mockup</title>
   <filter id="blurMe">
     <feGaussianBlur in="SourceGraphic" stdDeviation="5" />
-  </filter>
-  <filter id="blurMe2">
-    <feGaussianBlur in="SourceGraphic" stdDeviation="3" />
   </filter>
   <g id="timeline">
     <g id="steps">
@@ -106,8 +101,7 @@
       <path class="cls-10" d="M225.63,146.47a45,45,0,0,1,44.25,45.67c0,.14,0,.28,0,.42l4.24.07c0-.15,0-.29,0-.43a49.2,49.2,0,0,0-48.43-50h-.42l-.07,4.24Z"/>
     </g>
     <circle id="HTML_placeholder" class="cls-11" cx="224.99" cy="191.49" r="42.5"/>
-    <text id="year_blur" filter="url(#blurMe2)" class="cls-12" transform="translate(202.79 198.2)">1995</text>
-    <text id="year" class="cls-12" transform="translate(202.79 198.2)">1995</text>
+    <text id="year" class="cls-12" transform="translate(204.2 198.76)">1995</text>
   </g>
   <g id="dataPoint_high">
     <g>
@@ -130,7 +124,6 @@
       <path class="cls-10" d="M75.63,72a45,45,0,0,1,44.25,45.67c0,.14,0,.28,0,.42l4.24.07c0-.15,0-.29,0-.43a49.2,49.2,0,0,0-48.43-50c-.14,0-.28,0-.42,0L75.2,72Z"/>
     </g>
     <circle id="HTML_placeholder-2" data-name="HTML_placeholder" class="cls-11" cx="74.99" cy="116.77" r="42.5"/>
-    <text id="year_blur-2" filter="url(#blurMe2)" data-name="year_blur" class="cls-12" transform="translate(53.99 123.7)">1943</text>
-    <text id="year-2" data-name="year" class="cls-12" transform="translate(53.99 123.7)">1943</text>
+    <text id="year-2" data-name="year" class="cls-12" transform="translate(53.99 122.62)">1943</text>
   </g>
 </svg>

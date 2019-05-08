@@ -1,0 +1,73 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="280" height="390" viewBox="0 0 280 390">
+  <defs>
+    <style>
+      .interface_cls-1 {
+        fill: #a6e9ff;
+        opacity: 0.1;
+      }
+
+      .interface_cls-2, .interface_cls-4 {
+        fill: #73dcff;
+      }
+
+      .interface_cls-3 {
+        fill: none;
+      }
+
+      .interface_cls-4 {
+        opacity: 0.7;
+      }
+    </style>
+  </defs>
+  <title>interface_time_date</title>
+  <g id="date_block">
+    <polygon class="interface_cls-1" points="161.85 193 152.89 184.04 63.82 184.04 53.5 173.73 53.5 97.77 63.8 88.5 152.53 88.5 161.45 96.52 251.42 96.52 261.83 105.88 261.83 182.58 251.41 193 161.85 193"/>
+    <path class="interface_cls-2" d="M152.34,89,161,96.76l.28.26h90l10.1,9.09v76.26L251.2,192.5H162.05l-8.66-8.66-.29-.3H64l-10-10V98l10-9h88.35m.39-1H63.61L53,97.55v76.38l10.61,10.61h89.08l8.95,9h90l10.71-10.72V105.66L251.62,96h-90l-8.91-8Z"/>
+  </g>
+  <g>
+    <polygon class="interface_cls-1" points="0.5 331.17 8.59 322.27 8.59 237.83 0.5 229.82 0.5 197.1 11.11 179.83 11.11 55.13 0.5 39.58 0.5 4.96 14 4.96 56.5 44 56.5 87.78 45.89 97.33 45.89 174.14 56.5 184.75 56.5 205.77 45.89 215.32 45.89 292.14 56.5 302.75 56.5 318.55 13.64 357.92 13.64 376.27 0.5 388.34 0.5 331.17"/>
+    <path class="interface_cls-2" d="M13.8,5.46,56,44.22V87.56L45.72,96.81l-.33.29v77.25l.29.29L56,185v20.59L45.72,214.8l-.33.3v77.25l.29.29L56,303v15.37L13.46,357.4l-.32.3v18.35L1,387.2V331.36l7.83-8.61.26-.28V237.62l-.3-.29L1,229.61V197.25l10.46-17,.15-.24V55l-.18-.25L1,39.42v-34H13.8m.39-1H0V39.73L10.61,55.28V179.69L0,197V230l8.09,8v84L0,331v58.5l14.14-13V358.14L57,318.77V302.54h0L46.39,291.93V215.55L57,206h0V184.54h0L46.39,173.93V97.55L57,88h0V43.78L14.19,4.46Z"/>
+  </g>
+  <g id="time_block">
+    <polygon class="interface_cls-1" points="161.85 311 152.89 302.04 63.82 302.04 53.5 291.73 53.5 215.77 63.8 206.5 152.53 206.5 161.45 214.52 251.42 214.52 261.83 223.88 261.83 300.58 251.41 311 161.85 311"/>
+    <path class="interface_cls-2" d="M152.34,207l8.63,7.76.28.26h90l10.1,9.09v76.26L251.2,310.5H162.05l-8.66-8.66-.29-.3H64l-10-10V216l10-9h88.35m.39-1H63.61L53,215.55v76.38l10.61,10.61h89.08l8.95,9h90l10.71-10.72V223.66L251.62,214h-90l-8.91-8Z"/>
+  </g>
+  <g id="html_placeholder_time">
+    <rect class="interface_cls-3" x="64.09" y="102.6" width="186.07" height="74.52"/>
+  </g>
+  <g id="html_placeholder_date">
+    <rect class="interface_cls-3" x="64.09" y="220.8" width="186.07" height="74.52"/>
+  </g>
+  <circle class="interface_cls-4" cx="42.44" cy="195" r="3.43"/>
+  <circle class="interface_cls-4" cx="42.44" cy="204.09" r="3.43"/>
+  <g id="circles">
+    <g id="interface_outer_circle">
+      <path class="interface_cls-4" d="M26.65,79.85l.79-.8a10.13,10.13,0,1,1,12,0l.8.8a11.24,11.24,0,1,0-13.56,0Z"/>
+    </g>
+    <path class="interface_cls-2" d="M33.43,64.88a6.26,6.26,0,1,1-6.26,6.26,6.27,6.27,0,0,1,6.26-6.26m0-1a7.26,7.26,0,1,0,7.25,7.26,7.26,7.26,0,0,0-7.25-7.26Z"/>
+  </g>
+  <polygon class="interface_cls-2" points="26 295.78 26 299.97 11.1 284.8 11.1 280.61 26 295.78"/>
+  <polygon class="interface_cls-2" points="26 303.34 26 307.52 11.1 292.36 11.1 288.17 26 303.34"/>
+  <polygon class="interface_cls-2" points="26 310.49 26 314.67 11.1 299.51 11.1 295.32 26 310.49"/>
+  <polygon class="interface_cls-2" points="26 317.93 26 322.12 11.1 306.95 11.1 302.76 26 317.93"/>
+  <circle class="interface_cls-4" cx="8.72" cy="204.09" r="3.43"/>
+  <circle class="interface_cls-4" cx="8.72" cy="222.27" r="3.43"/>
+  <polygon class="interface_cls-2" points="43.06 125.58 43.06 129.77 28.16 114.6 28.16 110.41 43.06 125.58"/>
+  <polygon class="interface_cls-2" points="43.06 133.14 43.06 137.32 28.16 122.16 28.16 117.97 43.06 133.14"/>
+  <polygon class="interface_cls-2" points="43.06 140.29 43.06 144.47 28.16 129.31 28.16 125.12 43.06 140.29"/>
+  <polygon class="interface_cls-2" points="43.06 147.73 43.06 151.91 28.16 136.75 28.16 132.56 43.06 147.73"/>
+  <g>
+    <circle class="interface_cls-2" cx="42.44" cy="185.91" r="3.43"/>
+    <polygon class="interface_cls-2" points="43.31 181.93 41.57 181.93 41.57 189.89 43.31 189.89 43.31 181.93 43.31 181.93"/>
+    <polygon class="interface_cls-2" points="40.24 182.48 39.01 183.71 44.64 189.34 45.87 188.11 40.24 182.48 40.24 182.48"/>
+    <polygon class="interface_cls-2" points="46.42 185.04 38.46 185.04 38.46 186.78 46.42 186.78 46.42 185.04 46.42 185.04"/>
+    <polygon class="interface_cls-2" points="44.64 182.48 39.01 188.11 40.24 189.34 45.88 183.71 44.64 182.48 44.64 182.48"/>
+  </g>
+  <g>
+    <circle class="interface_cls-2" cx="8.72" cy="213.18" r="3.43"/>
+    <polygon class="interface_cls-2" points="9.59 209.2 7.84 209.2 7.84 217.16 9.59 217.16 9.59 209.2 9.59 209.2"/>
+    <polygon class="interface_cls-2" points="6.52 209.75 5.28 210.98 10.91 216.61 12.15 215.38 6.52 209.75 6.52 209.75"/>
+    <polygon class="interface_cls-2" points="12.7 212.31 4.74 212.31 4.74 214.05 12.7 214.05 12.7 212.31 12.7 212.31"/>
+    <polygon class="interface_cls-2" points="10.92 209.74 5.29 215.37 6.52 216.61 12.15 210.97 10.92 209.74 10.92 209.74"/>
+  </g>
+</svg>

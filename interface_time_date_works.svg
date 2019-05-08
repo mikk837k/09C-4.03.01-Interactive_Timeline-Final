@@ -1,0 +1,61 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="280" height="390" viewBox="0 0 280 390">
+  <defs>
+    <style>
+      .interface_cls-1 {
+        fill: #a6e9ff;
+        opacity: 0.1;
+      }
+
+      .interface_cls-2, .interface_cls-4 {
+        fill: #73dcff;
+      }
+
+      .interface_cls-3 {
+        fill: none;
+      }
+
+      .interface_cls-4 {
+        opacity: 0.7;
+      }
+    </style>
+  </defs>
+  <title>interface_time_date</title>
+  <g id="date_block">
+    <polygon class="interface_cls-1" points="162.26 192 153.31 183.04 64.23 183.04 54.5 173.31 54.5 98.22 64.19 89.5 152.15 89.5 161.06 97.52 251.04 97.52 260.83 106.33 260.83 182.16 250.99 192 162.26 192"/>
+    <path class="interface_cls-2" d="M151.57,91l8.06,7.25.86.77h90l8.87,8v74.54l-9,9H162.88l-8.07-8.08-.88-.88H64.85L56,172.69V98.88L64.76,91h86.81m1.16-3H63.61L53,97.55v76.38l10.61,10.61h89.08l8.95,9h90l10.71-10.72V105.66L251.62,96h-90l-8.91-8Z"/>
+  </g>
+  <g>
+    <polygon class="interface_cls-1" points="1.5 331.56 9.59 322.66 9.59 237.41 1.5 229.41 1.5 197.39 12.11 180.11 12.11 54.82 1.5 39.27 1.5 5.96 13.61 5.96 55.5 44.44 55.5 87.33 44.89 96.88 44.89 174.56 55.5 185.16 55.5 205.33 44.89 214.88 44.89 292.56 55.5 303.17 55.5 318.11 12.64 357.48 12.64 375.83 1.5 386.06 1.5 331.56"/>
+    <path class="interface_cls-2" d="M13,7.46,54,45.09V86.66l-9.62,8.66-1,.89v79l.88.88L54,185.79v18.87l-9.62,8.66-1,.89v79l.88.88L54,303.79v13.66L12.11,355.93l-1,.89v18.35L3,382.65V332.14l7.31-8,.78-.86V236.79l-.89-.88L3,228.78v-31l10.16-16.55.45-.72V54.35l-.53-.76L3,38.81V7.46H13m1.16-3H0V39.73L10.61,55.28V179.69L0,197V230l8.09,8v84L0,331v58.5l14.14-13V358.14L57,318.77V302.54h0L46.39,291.93V215.55L57,206h0V184.54h0L46.39,173.93V97.55L57,88h0V43.78L14.19,4.46Z"/>
+  </g>
+  <g id="time_block">
+    <polygon class="interface_cls-1" points="162.26 310 153.31 301.04 64.23 301.04 54.5 291.31 54.5 216.22 64.19 207.5 152.15 207.5 161.06 215.52 251.04 215.52 260.83 224.33 260.83 300.16 250.99 310 162.26 310"/>
+    <path class="interface_cls-2" d="M151.57,209l8.06,7.25.86.77h90l8.87,8v74.54l-9,9H162.88l-8.07-8.08-.88-.88H64.85L56,290.69V216.88L64.76,209h86.81m1.16-3H63.61L53,215.55v76.38l10.61,10.61h89.08l8.95,9h90l10.71-10.72V223.66L251.62,214h-90l-8.91-8Z"/>
+  </g>
+  <g id="html_placeholder_time">
+    <rect class="interface_cls-3" x="64.09" y="102.6" width="186.07" height="74.52"/>
+  </g>
+  <g id="html_placeholder_date">
+    <rect class="interface_cls-3" x="64.09" y="220.8" width="186.07" height="74.52"/>
+  </g>
+  <circle class="interface_cls-4" cx="42.44" cy="185.91" r="3.43"/>
+  <circle class="interface_cls-4" cx="42.44" cy="195" r="3.43"/>
+  <circle class="interface_cls-4" cx="42.44" cy="204.09" r="3.43"/>
+  <g id="circles">
+    <g id="interface_outer_circle">
+      <path class="interface_cls-4" d="M26.65,79.85l.79-.8a10.13,10.13,0,1,1,12,0l.8.8a11.24,11.24,0,1,0-13.56,0Z"/>
+    </g>
+    <path class="interface_cls-2" d="M33.43,64.88a6.26,6.26,0,1,1-6.26,6.26,6.27,6.27,0,0,1,6.26-6.26m0-1a7.26,7.26,0,1,0,7.25,7.26,7.26,7.26,0,0,0-7.25-7.26Z"/>
+  </g>
+  <polygon class="interface_cls-2" points="26 295.78 26 299.97 11.1 284.8 11.1 280.61 26 295.78"/>
+  <polygon class="interface_cls-2" points="26 303.34 26 307.52 11.1 292.36 11.1 288.17 26 303.34"/>
+  <polygon class="interface_cls-2" points="26 310.49 26 314.67 11.1 299.51 11.1 295.32 26 310.49"/>
+  <polygon class="interface_cls-2" points="26 317.93 26 322.12 11.1 306.95 11.1 302.76 26 317.93"/>
+  <circle class="interface_cls-4" cx="8.72" cy="204.09" r="3.43"/>
+  <circle class="interface_cls-4" cx="8.72" cy="213.18" r="3.43"/>
+  <circle class="interface_cls-4" cx="8.72" cy="222.27" r="3.43"/>
+  <polygon class="interface_cls-2" points="43.06 125.58 43.06 129.77 28.16 114.6 28.16 110.41 43.06 125.58"/>
+  <polygon class="interface_cls-2" points="43.06 133.14 43.06 137.32 28.16 122.16 28.16 117.97 43.06 133.14"/>
+  <polygon class="interface_cls-2" points="43.06 140.29 43.06 144.47 28.16 129.31 28.16 125.12 43.06 140.29"/>
+  <polygon class="interface_cls-2" points="43.06 147.73 43.06 151.91 28.16 136.75 28.16 132.56 43.06 147.73"/>
+</svg>
