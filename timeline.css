@@ -38,6 +38,29 @@ body {
   );
 }
 
+#infobox {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+}
+
+.blink {
+  animation: blink 1s alternate-reverse 8;
+  /* animation-fill-mode: forwards; */
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 0.4;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
 #svg_timeAndDate {
   position: relative;
   flex-basis: 20vw;
@@ -53,6 +76,10 @@ body {
   /* background-color: blue;     */
 }
 
+#modal_placeholder svg {
+  height: 0;
+}
+
 #modal_screen {
   position: relative;
 }
@@ -60,6 +87,7 @@ body {
 /* #modal_placeholder  */
 
 #modal_window {
+  opacity: 0;
   position: absolute;
   display: flex;
 }
@@ -82,12 +110,46 @@ body {
 }
 
 #svg_folder {
+  opacity: 0;
   position: absolute;
   width: 80px;
   height: 50px;
 }
 #svg_folder svg {
   width: 100%;
+}
+
+.animate_folder {
+  animation: move_to_modal 0300ms linear 1;
+  animation-fill-mode: forwards;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes move_to_modal {
+  0% {
+  }
+
+  100% {
+    transform: translate(644px, 103px);
+  }
+}
+
+.animate_modal {
+  animation: animate_modal 0300ms linear 1;
+  animation-fill-mode: forwards;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes animate_modal {
+  0% {
+    height: 0;
+  }
+
+  100% {
+    height: 300px;
+  }
 }
 
 #svg_jarvis {
@@ -97,6 +159,90 @@ body {
   display: flex;
   justify-content: center;
   padding-top: 3vh;
+}
+
+#svg_jarvis svg {
+  overflow: initial;
+}
+
+.jarvis_rotate_outer_pins {
+  animation: jarvis_rotate_clockwise 5s reverse linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_rotate_outer_circle {
+  animation: jarvis_rotate_clockwise 5s linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_rotate_inner_circle {
+  animation: jarvis_rotate_clockwise 5s alternate-reverse linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_rotate_middle_pins {
+  animation: jarvis_rotate_clockwise 10s reverse linear infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes jarvis_rotate_clockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.jarvis_scale_inner_circle {
+  animation: jarvis_scale 300ms linear alternate 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_scale_inner_pins {
+  animation: jarvis_scale 400ms linear alternate 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_scale_middle_pins {
+  animation: jarvis_scale 500ms linear alternate 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_scale_middle_circle {
+  animation: jarvis_scale 600ms linear alternate 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_scale_outer_circle {
+  animation: jarvis_scale 700ms linear alternate 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.jarvis_scale_outer_pins {
+  animation: jarvis_scale 800ms linear alternate 2;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+@keyframes jarvis_scale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.1);
+  }
 }
 
 #svg_timeline {
@@ -110,24 +256,6 @@ body {
   overflow-x: scroll;
   overflow-y: hidden;
 }
-
-/* .cls-5 {
-  animation: flicker 0.2s ease-in-out infinite;
-}
-
-@keyframes flicker {
-  0% {
-    fill: #74dcff;
-  }
-
-  /* 50% {
-    fill: ;
-  } */
-
-/* 100% {
-    fill: #74dcff34;
-  } 
-} */
 
 .animate:hover {
   cursor: pointer;

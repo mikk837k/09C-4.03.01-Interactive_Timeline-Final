@@ -1,23 +1,23 @@
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="200" height="200" viewBox="0 0 200 200">
   <defs>
     <style>
-      .folder_icon_cls-1 {
+      .folder_cls-1 {
         fill: #a6e9ff;
         opacity: 0.7;
       }
 
-      .folder_icon_cls-2 {
+      .folder_cls-2 {
         fill: #73dcff;
       }
     </style>
   </defs>
   <title>folder_icon</title>
   <g id="folder_bottom">
-    <path class="folder_icon_cls-1" d="M26,157.5a4.51,4.51,0,0,1-4.5-4.5V54.5h155V153a4.51,4.51,0,0,1-4.5,4.5Z"/>
-    <path class="folder_icon_cls-2" d="M176,55v98a4,4,0,0,1-4,4H26a4,4,0,0,1-4-4V55H176m1-1H21v99a5,5,0,0,0,5,5H172a5,5,0,0,0,5-5V54Z"/>
+    <path class="folder_cls-1" d="M26,157.5a4.51,4.51,0,0,1-4.5-4.5V54.5h155V153a4.51,4.51,0,0,1-4.5,4.5Z"/>
+    <path class="folder_cls-2" d="M176,55v98a4,4,0,0,1-4,4H26a4,4,0,0,1-4-4V55H176m1-1H21v99a5,5,0,0,0,5,5H172a5,5,0,0,0,5-5V54Z"/>
   </g>
   <g id="folder_top">
-    <polygon class="folder_icon_cls-1" points="23.5 54.5 23.5 39.5 62.72 39.5 72.1 54.5 23.5 54.5"/>
-    <path class="folder_icon_cls-2" d="M62.45,40,71.2,54H24V40H62.45M63,39H23V55H73L63,39Z"/>
+    <polygon class="folder_cls-1" points="23.5 54.5 23.5 39.5 62.72 39.5 72.1 54.5 23.5 54.5"/>
+    <path class="folder_cls-2" d="M62.45,40,71.2,54H24V40H62.45M63,39H23V55H73L63,39Z"/>
   </g>
 </svg>

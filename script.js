@@ -15,32 +15,123 @@ function init() {
 }
 
 function clickedOnPage(event) {
-  console.log(event);
-
   action = event.target.parentElement.classList[0];
-
-  console.log(action);
 
   if (action === "animate") {
     event.preventDefault();
-    animateFolder(event);
-    animateModalWindow(event);
-    setMovieInfo(event);
+    clearElements(event);
   }
 }
 
-function animateFolder(event) {}
+function clearElements(event) {
+  const folder = document.querySelector("#svg_folder");
+  const modalSvg = document.querySelector("#modal_placeholder svg");
+  const modal_window = document.querySelector("#modal_window");
+  const textPlaceholder = document.querySelector(
+    "#modal_placeholder #infobox h1"
+  );
+  const guideText = document.querySelector("#modal_placeholder #infobox p");
+  textPlaceholder.style.display = "none";
+  guideText.style.display = "none";
+
+  folder.classList.remove("animate_folder");
+  folder.style.display = "block";
+
+  modalSvg.classList.remove("animate_modal");
+  modal_window.style.display = "none";
+
+  placeFolder(event);
+  scaleJarvis();
+}
+
+function scaleJarvis() {
+  console.log("scaleJarvis kørt");
+  document
+    .querySelector("#inner_circle")
+    .classList.add("jarvis_scale_inner_circle");
+  document.querySelector("#innerpins").classList.add("jarvis_scale_inner_pins");
+  document.querySelector("#innerpins").classList.add("jarvis_scale_inner_pins");
+  document
+    .querySelector("#middlepins")
+    .classList.add("jarvis_scale_middle_pins");
+  document
+    .querySelector("#middle_circle")
+    .classList.add("jarvis_scale_middle_circle");
+  document
+    .querySelector("#outer_circle")
+    .classList.add("jarvis_scale_outer_circle");
+  document.querySelector("#outerpins").classList.add("jarvis_scale_outer_pins");
+
+  document
+    .querySelector("#outerpins")
+    .addEventListener("animationend", clearJarvis);
+}
+
+function clearJarvis() {
+  console.log("clearJarvis kørt");
+  document
+    .querySelector("#inner_circle")
+    .classList.remove("jarvis_scale_inner_circle");
+  document
+    .querySelector("#innerpins")
+    .classList.remove("jarvis_scale_inner_pins");
+  document
+    .querySelector("#innerpins")
+    .classList.remove("jarvis_scale_inner_pins");
+  document
+    .querySelector("#middlepins")
+    .classList.remove("jarvis_scale_middle_pins");
+  document
+    .querySelector("#middle_circle")
+    .classList.remove("jarvis_scale_middle_circle");
+  document
+    .querySelector("#outer_circle")
+    .classList.remove("jarvis_scale_outer_circle");
+  document
+    .querySelector("#outerpins")
+    .classList.remove("jarvis_scale_outer_pins");
+}
+
+function placeFolder(event) {
+  // Where should the folder originate from (x,y pos)
+  let xPosStart = event.target.getBoundingClientRect().x;
+  let yPosStart = event.target.getBoundingClientRect().y;
+
+  const folder = document.querySelector("#svg_folder");
+
+  folder.style.transform = `translate(${xPosStart - 18}px,${yPosStart - 90}px)`;
+
+  setTimeout(function() {
+    moveFolder(event);
+  }, 100);
+}
+
+function moveFolder(event) {
+  const folder = document.querySelector("#svg_folder");
+  folder.style.opacity = 1;
+  folder.classList.add("animate_folder");
+
+  folder.addEventListener("animationend", function() {
+    openModalScreen(event, folder);
+  });
+}
+
+function openModalScreen(event, folderElement) {
+  const modal = document.querySelector("#modal_placeholder svg");
+
+  folderElement.style.display = "none";
+
+  modal.classList.add("animate_modal");
+  modal.addEventListener("animationend", function() {
+    setMovieInfo(event);
+  });
+}
 
 function loadJSON() {
   fetch("avengerMovies.json")
     .then(jsonData => jsonData.json())
     .then(jsonData => {
       myJSON = jsonData;
-      console.log(
-        myJSON.sort(function(a, b) {
-          return a.chrono_order - b.chrono_order;
-        })
-      );
       myJSON.sort(function(a, b) {
         return a.chrono_order - b.chrono_order;
       });
@@ -73,6 +164,19 @@ function loadSVG() {
       document
         .querySelector("#svg_jarvis")
         .insertAdjacentHTML("afterbegin", mySVGData);
+
+      document
+        .querySelector("#outerpins")
+        .classList.add("jarvis_rotate_outer_pins");
+      document
+        .querySelector("#outer_circle")
+        .classList.add("jarvis_rotate_outer_circle");
+      document
+        .querySelector("#inner_circle")
+        .classList.add("jarvis_rotate_inner_circle");
+      document
+        .querySelector("#middlepins")
+        .classList.add("jarvis_rotate_middle_pins");
     });
   fetch("interface_time_date.svg")
     .then(response => response.text())
@@ -80,6 +184,7 @@ function loadSVG() {
       document
         .querySelector("#svg_timeAndDate")
         .insertAdjacentHTML("afterbegin", mySVGData);
+      setTime();
     });
   fetch("modal.svg")
     .then(response => response.text())
@@ -95,6 +200,7 @@ function loadSVG() {
         .querySelector("#svg_folder")
         .insertAdjacentHTML("afterbegin", mySVGData);
     });
+  infoText();
 }
 
 // create lines on timeline
@@ -117,8 +223,8 @@ function createPins(pin, counter) {
   //   // make a clone
   const clone = myTemplate.cloneNode(true);
   //   // find X posistion of the line you want to add
-  const pinX1 = pin.getAttribute("x1");
-  const pinX2 = pin.getAttribute("x2");
+  // const pinX1 = pin.getAttribute("x1");
+  // const pinX2 = pin.getAttribute("x2");
 
   let offsetX1 = 25 * counter;
   let offsetX2 = 25 * counter;
@@ -132,11 +238,9 @@ function createPins(pin, counter) {
 
 function createDataPoints() {
   for (let counter = 1; counter <= 10; counter++) {
-    console.log(counter);
     createDataPointHigh(counter);
   }
   for (let counter = 1; counter <= 10; counter++) {
-    console.log(counter);
     createDataPointLow(counter);
   }
 }
@@ -173,8 +277,6 @@ function createDataPointHigh(counter) {
 
   let datapointOffset = getElementPosition.left + datapointCenter;
 
-  console.log(datapointCenter);
-
   let offsetPositionX = datapointOffset * 4 * counter;
   //   console.log(offsetPositionX);
   //   // position the clone from the calculated position "diffX"
@@ -192,15 +294,11 @@ function createDataPointLow(counter) {
 
   myTemplate.setAttribute("class", "animate");
   myTemplate.setAttribute("data-id", "21");
-  console.log(myTemplate);
 
   let getElementPosition = myTemplate.getBoundingClientRect();
 
-  console.log(getElementPosition);
   //   // make a clone
   const clone = myTemplate.cloneNode(true);
-
-  //   console.log(clone);
 
   const index = counter * 2 + 1;
 
@@ -217,8 +315,6 @@ function createDataPointLow(counter) {
 
   let datapointOffset = getElementPosition.left + datapointCenter + 75;
 
-  console.log(datapointCenter);
-
   let offsetPositionX = datapointOffset * counter;
 
   //   // position the clone from the calculated position "diffX"
@@ -230,10 +326,8 @@ function createDataPointLow(counter) {
 function getNewSVGElements() {
   console.log("getNewSVGElements kørt");
   const timelinePin = document.querySelectorAll(".animate");
-  console.log(timelinePin);
 
   timelinePin.forEach(pin => {
-    console.log(pin);
     pin.addEventListener("mouseenter", animatePin);
   });
 
@@ -244,8 +338,6 @@ function getNewSVGElements() {
 
 function animatePin(e) {
   console.log("animatePin kørt");
-
-  console.log(e);
 
   const outerCircle = e.target.children[2];
   const innerCircle = e.target.children[4];
@@ -276,36 +368,25 @@ function flickerAnimation() {
   setTimeout(flickerAnimation, randomNum * 800);
 }
 
-function animateModalWindow(event) {
-  const svgElement = document.querySelector("#modal_screen");
-
-  console.log(event.target.getBoundingClientRect());
-}
-
 function setMovieInfo(event) {
-  console.log("jeg kommer herned");
+  console.log("setMovieInfo kørt");
 
   myJSON.forEach(movie => {
-    // console.log(movie.id);
     if (parseInt(event.target.parentElement.dataset.id) === movie.id) {
       const svgElement = document.querySelector("#movie_placeholder");
 
-      console.log(svgElement);
-
       const getBoundRect = svgElement.getBoundingClientRect();
-
-      console.log(getBoundRect);
-
       // udfyld data om filmen i modal vinduet
       const modal = document.querySelector("#modal_window");
+
+      modal.style.display = "flex";
+      modal.style.opacity = 1;
 
       let splitString = movie.release_date.split("-");
 
       let rearrangeDateString = `${splitString[2]}-${splitString[1]}-${
         splitString[0]
       }`;
-
-      console.log(splitString);
 
       modal.style.left = getBoundRect.x + "px";
       modal.style.top = getBoundRect.y + "px";
@@ -323,4 +404,55 @@ function setMovieInfo(event) {
         "img/" + movie.image + ".png";
     }
   });
+}
+
+function setTime() {
+  let today = new Date();
+
+  let date = `${("0" + today.getDate()).slice(-2)}-${(
+    "0" +
+    (today.getMonth() + 1)
+  ).slice(-2)}-${today.getFullYear()}`;
+  let time = `${("0" + today.getHours()).slice(-2)}:${(
+    "0" + today.getMinutes()
+  ).slice(-2)}:${("0" + today.getSeconds()).slice(-2)}`;
+
+  const timeBlock = document.querySelector("#svg_timeAndDate #text_date");
+  const dateBlock = document.querySelector("#svg_timeAndDate #text_date-2");
+
+  timeBlock.textContent = time;
+  dateBlock.textContent = date;
+
+  setTimeout(setTime, 1000);
+}
+
+function infoText() {
+  const textPlaceholder = document.querySelector(
+    "#modal_placeholder #infobox h1"
+  );
+  stepOne();
+  function stepOne() {
+    textPlaceholder.textContent = "Initializing...";
+    textPlaceholder.classList.add("blink");
+
+    textPlaceholder.addEventListener("animationend", function() {
+      stepTwo();
+    });
+  }
+
+  function stepTwo() {
+    textPlaceholder.classList.remove("blink");
+    textPlaceholder.textContent = "";
+    textPlaceholder.textContent = "Avenger Initiative Loaded";
+
+    setTimeout(stepThree, 3000);
+  }
+
+  function stepThree() {
+    const guideText = document.querySelector("#modal_placeholder #infobox p");
+    textPlaceholder.textContent = "";
+    textPlaceholder.textContent = "Chronologically Timeline Ready";
+    guideText.textContent =
+      "choose a historical significant point in the timeline below";
+  }
 }
