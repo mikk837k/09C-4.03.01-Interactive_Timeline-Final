@@ -11,10 +11,32 @@ function init() {
   loadJSON();
   document
     .querySelector("#svg_timeline")
-    .addEventListener("click", clickedOnPage);
+    .addEventListener("click", clickedOnTimeline);
+  document
+    .querySelector("#modal_placeholder")
+    .addEventListener("click", closeModal);
 }
 
-function clickedOnPage(event) {
+function closeModal(event) {
+  console.log("closemodal kørt");
+  console.log(event);
+
+  const modal_window = document.querySelector("#modal_window");
+  const modal_svg = document.querySelector("#modal_placeholder svg");
+  const infobox = document.querySelector("#modal_placeholder #infobox");
+
+  let action = event.target.id;
+
+  console.log(action);
+  if (action === "close_screen") {
+    console.log("kører min if statement");
+    modal_window.style.display = "none";
+    modal_svg.style.display = "none";
+    infobox.style.display = "initial";
+  }
+}
+
+function clickedOnTimeline(event) {
   action = event.target.parentElement.classList[0];
 
   if (action === "animate") {
@@ -27,16 +49,13 @@ function clearElements(event) {
   const folder = document.querySelector("#svg_folder");
   const modalSvg = document.querySelector("#modal_placeholder svg");
   const modal_window = document.querySelector("#modal_window");
-  const textPlaceholder = document.querySelector(
-    "#modal_placeholder #infobox h1"
-  );
-  const guideText = document.querySelector("#modal_placeholder #infobox p");
-  textPlaceholder.style.display = "none";
-  guideText.style.display = "none";
+  const infobox = document.querySelector("#modal_placeholder #infobox");
+
+  infobox.style.display = "none";
 
   folder.classList.remove("animate_folder");
   folder.style.display = "block";
-
+  modalSvg.style.display = "initial";
   modalSvg.classList.remove("animate_modal");
   modal_window.style.display = "none";
 

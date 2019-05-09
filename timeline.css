@@ -44,8 +44,12 @@ body {
   text-align: center;
 }
 
+#close_screen:hover {
+  cursor: pointer;
+}
+
 .blink {
-  animation: blink 1s alternate-reverse 8;
+  animation: blink 1s alternate-reverse 6;
   /* animation-fill-mode: forwards; */
   transform-box: fill-box;
   transform-origin: center;
@@ -73,7 +77,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background-color: blue;     */
 }
 
 #modal_placeholder svg {
